@@ -1,0 +1,102 @@
+@*
+    ログイン画面
+*@
+
+@model EmployeeManagement.Web.Presentations.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "ログイン";
+}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow p-5">
+
+                <!-- タイトル -->
+                <h2 class="text-center mb-5">
+                    社員情報管理システム
+                </h2>
+
+                <!-- ログインフォーム -->
+                <form asp-action="Index" method="post">
+
+                    <!-- メールアドレス -->
+                    <div class="mb-4">
+
+                        <label asp-for="EmailAddress"
+                               class="form-label">
+
+                            ログインID(メールアドレス)
+
+                        </label>
+
+                        <input asp-for="EmailAddress"
+                               class="form-control" />
+
+                        <span asp-validation-for="EmailAddress"
+                              class="text-danger"></span>
+
+                    </div>
+
+                    <!-- パスワード -->
+                    <div class="mb-4">
+
+                        <label asp-for="Password"
+                               class="form-label">
+
+                            パスワード
+
+                        </label>
+
+                        <input asp-for="Password"
+                               type="password"
+                               class="form-control" />
+
+                        <span asp-validation-for="Password"
+                              class="text-danger"></span>
+
+                    </div>
+
+                    <!-- エラーメッセージ -->
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="alert alert-danger">
+
+                            @Model.ErrorMessage
+
+                        </div>
+                    }
+
+                    <!-- ログインボタン -->
+                    <div class="text-center mt-5">
+
+                        <button type="submit"
+                                class="btn btn-primary btn-lg w-50">
+
+                            ログイン
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts{
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+}

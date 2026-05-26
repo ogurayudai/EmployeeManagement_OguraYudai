@@ -1,24 +1,26 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using EmployeeManagement.Web.Models;
 
-namespace EmployeeManagement.Web.Controllers;
+namespace EmployeeManagement.Web.Presentations.Controllers;
 
+/// <summary>
+/// ホームController
+/// </summary>
 public class HomeController : Controller
 {
+    /// <summary>
+    /// ホーム画面
+    /// </summary>
+    [HttpGet]
     public IActionResult Index()
     {
-        return View();
-    }
+        var employeeName =
+            HttpContext.Session.GetString("LoginEmployeeName");
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+        if (string.IsNullOrEmpty(employeeName))
+        {
+            return RedirectToAction("Index", "Login");
+        }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View("Index", employeeName);
     }
 }

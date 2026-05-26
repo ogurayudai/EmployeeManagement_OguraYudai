@@ -1,0 +1,36 @@
+@model EmployeeManagement.Web.Applications.Domains.Department
+
+@{
+    ViewData["Title"] = "部門更新";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">@ViewData["Title"]</h2>
+
+    <form asp-action="Edit" method="post">
+
+        <input asp-for="Id" type="hidden" />
+
+        <div class="mb-3">
+            <label asp-for="DeptName" class="form-label">
+                部門名
+            </label>
+
+            <input asp-for="DeptName" class="form-control" />
+
+            <span asp-validation-for="DeptName"
+                  class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            更新
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            戻る
+        </a>
+
+    </form>
+
+</div>

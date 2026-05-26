@@ -1,0 +1,199 @@
+@*
+    社員更新画面
+*@
+
+@model EmployeeManagement.Web.Presentations.ViewModels.EmployeeFormViewModel
+
+@{
+    ViewData["Title"] = "社員更新";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        @ViewData["Title"]
+    </h2>
+
+    <form asp-action="Edit" method="post">
+
+        <input asp-for="Id" type="hidden" />
+
+        <!-- 部門 -->
+        <div class="mb-3">
+
+            <label asp-for="DepartmentId"
+                   class="form-label">
+
+                部門
+
+            </label>
+
+            <select asp-for="DepartmentId"
+                    class="form-select">
+
+                @foreach (var department in Model.Departments)
+                {
+                    <option value="@department.Id">
+
+                        @department.DeptName
+
+                    </option>
+                }
+
+            </select>
+
+            <span asp-validation-for="DepartmentId"
+                  class="text-danger"></span>
+
+        </div>
+
+        <!-- 社員番号 -->
+        <div class="mb-3">
+
+            <label asp-for="EmployeeNo"
+                   class="form-label">
+
+                社員番号
+
+            </label>
+
+            <input asp-for="EmployeeNo"
+                   class="form-control" />
+
+            <span asp-validation-for="EmployeeNo"
+                  class="text-danger"></span>
+
+        </div>
+
+        <!-- 氏名 -->
+        <div class="mb-3">
+
+            <label asp-for="Name"
+                   class="form-label">
+
+                氏名
+
+            </label>
+
+            <input asp-for="Name"
+                   class="form-control" />
+
+            <span asp-validation-for="Name"
+                  class="text-danger"></span>
+
+        </div>
+
+        <!-- 氏名かな -->
+        <div class="mb-3">
+
+            <label asp-for="NameKana"
+                   class="form-label">
+
+                氏名かな
+
+            </label>
+
+            <input asp-for="NameKana"
+                   class="form-control" />
+
+            <span asp-validation-for="NameKana"
+                  class="text-danger"></span>
+
+        </div>
+
+        <!-- メールアドレス -->
+        <div class="mb-3">
+
+            <label asp-for="EmailAddress"
+                   class="form-label">
+
+                メールアドレス
+
+            </label>
+
+            <input asp-for="EmailAddress"
+                   class="form-control" />
+
+            <span asp-validation-for="EmailAddress"
+                  class="text-danger"></span>
+
+        </div>
+
+        <!-- 生年月日 -->
+        <div class="mb-3">
+
+            <label asp-for="Birthday"
+                   class="form-label">
+
+                生年月日
+
+            </label>
+
+            <input asp-for="Birthday"
+                   type="date"
+                   class="form-control" />
+
+            <span asp-validation-for="Birthday"
+                  class="text-danger"></span>
+
+        </div>
+
+        <!-- 性別 -->
+        <div class="mb-3">
+
+            <label asp-for="Gender"
+                   class="form-label">
+
+                性別
+
+            </label>
+
+            <select asp-for="Gender"
+                    class="form-select">
+
+                <option value="1">
+                    男
+                </option>
+
+                <option value="2">
+                    女
+                </option>
+
+            </select>
+
+            <span asp-validation-for="Gender"
+                  class="text-danger"></span>
+
+        </div>
+
+        <!-- エラー -->
+        <div asp-validation-summary="All"
+             class="text-danger mb-3">
+        </div>
+
+        <!-- ボタン -->
+        <button type="submit"
+                class="btn btn-primary">
+
+            更新
+
+        </button>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+
+            戻る
+
+        </a>
+
+    </form>
+
+</div>
+
+@section Scripts{
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+}

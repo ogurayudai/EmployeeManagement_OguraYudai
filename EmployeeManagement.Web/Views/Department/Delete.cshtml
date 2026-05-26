@@ -1,0 +1,85 @@
+@*
+    部門削除画面
+*@
+
+@model EmployeeManagement.Web.Applications.Domains.Department
+
+@{
+    ViewData["Title"] = "部門削除";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+
+        @ViewData["Title"]
+
+    </h2>
+
+    <!-- 警告 -->
+    <div class="alert alert-warning">
+
+        警告：
+        「@Model.DeptName」を本当に削除しますか？
+
+    </div>
+
+    <!-- エラーメッセージ -->
+    <div asp-validation-summary="All"
+         class="text-danger mb-3">
+    </div>
+
+    <!-- 部門情報 -->
+    <table class="table table-bordered">
+
+        <tr>
+
+            <th>
+                部門ID
+            </th>
+
+            <td>
+                @Model.Id
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <th>
+                部門名
+            </th>
+
+            <td>
+                @Model.DeptName
+            </td>
+
+        </tr>
+
+    </table>
+
+    <!-- 削除フォーム -->
+    <form asp-action="DeleteConfirm"
+          method="post">
+
+        <input type="hidden"
+               name="id"
+               value="@Model.Id" />
+
+        <button type="submit"
+                class="btn btn-danger">
+
+            はい
+
+        </button>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+
+            いいえ
+
+        </a>
+
+    </form>
+
+</div>

@@ -1,0 +1,50 @@
+@*
+    部門追加画面
+*@
+
+@model EmployeeManagement.Web.Applications.Domains.Department
+
+@{
+    ViewData["Title"] = "部門追加";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        @ViewData["Title"]
+    </h2>
+
+    <form asp-action="Create" method="post">
+
+        <div class="mb-3">
+            <label asp-for="DeptName"
+                   class="form-label">
+                部門名
+            </label>
+
+            <input asp-for="DeptName"
+                   class="form-control" />
+
+            <span asp-validation-for="DeptName"
+                  class="text-danger"></span>
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary">
+            追加
+        </button>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+            戻る
+        </a>
+
+    </form>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,63 @@
+@*
+    部門一覧画面
+*@
+
+@model IEnumerable<EmployeeManagement.Web.Applications.Domains.Department>
+
+@{
+    ViewData["Title"] = "部門一覧";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        @ViewData["Title"]
+    </h2>
+
+    <div class="mb-3">
+        <a asp-action="Create"
+           class="btn btn-primary">
+            追加
+        </a>
+
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn btn-secondary">
+            戻る
+        </a>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>部門ID</th>
+                <th>部門名</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var department in Model)
+            {
+                <tr>
+                    <td>@department.Id</td>
+                    <td>@department.DeptName</td>
+                    <td>
+                        <a asp-action="Edit"
+                           asp-route-id="@department.Id"
+                           class="btn btn-warning btn-sm">
+                            編集
+                        </a>
+
+                        <a asp-action="Delete"
+                           asp-route-id="@department.Id"
+                           class="btn btn-danger btn-sm">
+                            削除
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

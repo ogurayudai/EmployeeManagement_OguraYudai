@@ -1,0 +1,65 @@
+@*
+    社員削除画面
+*@
+
+@model EmployeeManagement.Web.Applications.Domains.Employee
+
+@{
+    ViewData["Title"] = "社員削除";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        @ViewData["Title"]
+    </h2>
+
+    <div class="alert alert-warning">
+
+        「@Model.Name」を本当に削除しますか？
+
+    </div>
+
+    <table class="table table-bordered">
+
+        <tr>
+            <th>社員番号</th>
+            <td>@Model.EmployeeNo</td>
+        </tr>
+
+        <tr>
+            <th>氏名</th>
+            <td>@Model.Name</td>
+        </tr>
+
+        <tr>
+            <th>部門</th>
+            <td>@Model.DepartmentName</td>
+        </tr>
+
+    </table>
+
+    <form asp-action="DeleteConfirm"
+          method="post">
+
+        <input type="hidden"
+               name="id"
+               value="@Model.Id" />
+
+        <button type="submit"
+                class="btn btn-danger">
+
+            削除
+
+        </button>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+
+            戻る
+
+        </a>
+
+    </form>
+
+</div>
