@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Hqxz6NEL87sNvDJq7DW_" name="ログイン">
-        <mxGraphModel dx="1551" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1551" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -170,7 +170,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="AgCW8LAt7ALh4I6-urWh" name="社員一覧表示">
-        <mxGraphModel dx="1454" dy="853" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1454" dy="845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -298,7 +298,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="XrkFqvxlzPbbdNpLusFF" name="社員登録">
-        <mxGraphModel dx="2584" dy="1516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1108" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -356,8 +356,8 @@
                         <mxPoint x="510" y="230" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="zspMLrwM-0y_AIWsKa7y-13" value="社員登録画面入力" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="280" y="208" width="120" height="30" as="geometry"/>
+                <mxCell id="zspMLrwM-0y_AIWsKa7y-13" value="&lt;span style=&quot;color: rgb(63, 63, 63); text-align: left; text-wrap-mode: wrap;&quot;&gt;&amp;nbsp;registerEmployee()&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="275" y="208" width="130" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="zspMLrwM-0y_AIWsKa7y-14" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -922,7 +922,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="yBIqK_Yjay9fNqVZEUe3" name="部門一覧表示">
-        <mxGraphModel dx="1163" dy="682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1551" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
