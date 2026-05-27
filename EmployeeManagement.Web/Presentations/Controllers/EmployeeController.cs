@@ -1,5 +1,6 @@
 using EmployeeManagement.Web.Applications.Domains;
 using EmployeeManagement.Web.Applications.Services;
+using EmployeeManagement.Web.Exceptions;
 using EmployeeManagement.Web.Presentations.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,9 +22,6 @@ public class EmployeeController : Controller
         _departmentService = departmentService;
     }
 
-    /// <summary>
-    /// 社員一覧画面
-    /// </summary>
     [HttpGet]
     public async Task<IActionResult> Index(string? keyword)
     {
@@ -43,9 +41,6 @@ public class EmployeeController : Controller
         return View(employees);
     }
 
-    /// <summary>
-    /// 社員追加画面
-    /// </summary>
     [HttpGet]
     public async Task<IActionResult> Create()
     {
@@ -60,20 +55,14 @@ public class EmployeeController : Controller
         var departments =
             await _departmentService.GetAllAsync();
 
-        var viewModel = new EmployeeFormViewModel
+        return View(new EmployeeFormViewModel
         {
             Departments = departments
-        };
-
-        return View(viewModel);
+        });
     }
 
-    /// <summary>
-    /// 社員追加処理
-    /// </summary>
     [HttpPost]
-    public async Task<IActionResult> Create(
-        EmployeeFormViewModel viewModel)
+    public async Task<IActionResult> Create(EmployeeFormViewModel viewModel)
     {
         if (!ModelState.IsValid)
         {
@@ -94,8 +83,22 @@ public class EmployeeController : Controller
             Gender = viewModel.Gender
         };
 
-        var errorMessage =
-            await _employeeService.RegisterAsync(employee);
+        string? errorMessage;
+
+        try
+        {
+            errorMessage =
+                await _employeeService.RegisterAsync(employee);
+        }
+        catch (DomainException e)
+        {
+            ModelState.AddModelError("", e.Message);
+
+            viewModel.Departments =
+                await _departmentService.GetAllAsync();
+
+            return View(viewModel);
+        }
 
         if (errorMessage is not null)
         {
@@ -110,9 +113,6 @@ public class EmployeeController : Controller
         return RedirectToAction("Index");
     }
 
-    /// <summary>
-    /// 社員更新画面
-    /// </summary>
     [HttpGet]
     public async Task<IActionResult> Edit(int id)
     {
@@ -127,7 +127,7 @@ public class EmployeeController : Controller
         var departments =
             await _departmentService.GetAllAsync();
 
-        var viewModel = new EmployeeFormViewModel
+        return View(new EmployeeFormViewModel
         {
             Id = employee.Id,
             DepartmentId = employee.DepartmentId,
@@ -138,17 +138,11 @@ public class EmployeeController : Controller
             Birthday = employee.Birthday,
             Gender = employee.Gender,
             Departments = departments
-        };
-
-        return View(viewModel);
+        });
     }
 
-    /// <summary>
-    /// 社員更新処理
-    /// </summary>
     [HttpPost]
-    public async Task<IActionResult> Edit(
-        EmployeeFormViewModel viewModel)
+    public async Task<IActionResult> Edit(EmployeeFormViewModel viewModel)
     {
         if (!ModelState.IsValid)
         {
@@ -170,8 +164,22 @@ public class EmployeeController : Controller
             Gender = viewModel.Gender
         };
 
-        var errorMessage =
-            await _employeeService.UpdateAsync(employee);
+        string? errorMessage;
+
+        try
+        {
+            errorMessage =
+                await _employeeService.UpdateAsync(employee);
+        }
+        catch (DomainException e)
+        {
+            ModelState.AddModelError("", e.Message);
+
+            viewModel.Departments =
+                await _departmentService.GetAllAsync();
+
+            return View(viewModel);
+        }
 
         if (errorMessage is not null)
         {
@@ -186,9 +194,6 @@ public class EmployeeController : Controller
         return RedirectToAction("Index");
     }
 
-    /// <summary>
-    /// 社員削除確認画面
-    /// </summary>
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
     {
@@ -203,9 +208,6 @@ public class EmployeeController : Controller
         return View(employee);
     }
 
-    /// <summary>
-    /// 社員削除処理
-    /// </summary>
     [HttpPost]
     public async Task<IActionResult> DeleteConfirm(int id)
     {

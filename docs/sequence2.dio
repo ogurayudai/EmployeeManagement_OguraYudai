@@ -1,0 +1,144 @@
+<mxfile host="65bd71144e">
+    <diagram id="JqvdcrO690FNGvVrAuHH" name="ページ1">
+        <mxGraphModel dx="2411" dy="1060" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="160" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Login / Index.cshtml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="359" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="LoginController" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="LoginServeice" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="ILoginRepository" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1310" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="LoginRepository" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1620" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="PostgreSQL" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1950" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="140" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="140" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="414" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="414" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1674.5700000000002" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="1674.5700000000002" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1364.4099999999999" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="1364.4099999999999" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1034.4099999999999" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="1034.4099999999999" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="724.4100000000001" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="724.4100000000001" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="2004.6200000000001" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="2004.6200000000001" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="6EyuJbuQnLzkOI0cPzaP" name="ページ2">
+        <mxGraphModel dx="1326" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="160" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-2" value="Login / Index.cshtml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="359" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-3" value="LoginController" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-4" value="LoginServeice" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-5" value="ILoginRepository" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1310" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-6" value="LoginRepository" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1620" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-7" value="PostgreSQL" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1950" y="170" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-8" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="140" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="140" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-9" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="414" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="414" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-10" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1674.5700000000002" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="1674.5700000000002" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-11" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1364.4099999999999" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="1364.4099999999999" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-12" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1034.4099999999999" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="1034.4099999999999" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-13" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="724.4100000000001" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="724.4100000000001" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zYrkCQnqJF5e6bnfcT6o-14" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="2004.6200000000001" y="844.7368421052631" as="sourcePoint"/>
+                        <mxPoint x="2004.6200000000001" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

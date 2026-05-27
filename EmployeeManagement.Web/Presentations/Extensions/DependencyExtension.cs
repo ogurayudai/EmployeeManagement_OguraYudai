@@ -1,5 +1,6 @@
 using EmployeeManagement.Web.Applications.Repositories;
 using EmployeeManagement.Web.Applications.Services;
+using EmployeeManagement.Web.Infrastructures.Adapters;
 using EmployeeManagement.Web.Infrastructures.Context;
 using EmployeeManagement.Web.Infrastructures.Repositories;
 
@@ -26,6 +27,11 @@ public static class DependencyExtension
     {
         // Dapper用DB接続
         services.AddScoped<DapperContext>();
+
+        // Adapter
+        services.AddScoped<EmployeeEntityAdapter>();
+        services.AddScoped<DepartmentEntityAdapter>();
+        services.AddScoped<LoginEntityAdapter>();
 
         // Repository
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();

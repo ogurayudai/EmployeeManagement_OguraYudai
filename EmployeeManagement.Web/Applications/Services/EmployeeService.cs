@@ -58,6 +58,8 @@ public class EmployeeService
             return "入力されたメールアドレスは既に使用されています。";
         }
 
+        employee.Validate();
+
         await _employeeRepository.InsertAsync(employee);
 
         return null;
@@ -82,6 +84,8 @@ public class EmployeeService
         {
             return "入力されたメールアドレスは既に使用されています。";
         }
+
+        employee.Validate();
 
         await _employeeRepository.UpdateAsync(employee);
 

@@ -1,3 +1,6 @@
+using System.Text.RegularExpressions;
+using EmployeeManagement.Web.Exceptions;
+
 namespace EmployeeManagement.Web.Applications.Domains;
 
 /// <summary>
@@ -49,4 +52,52 @@ public class Employee
     /// 部門名
     /// </summary>
     public string DepartmentName { get; set; } = string.Empty;
+
+    /// <summary>
+    /// 業務ルールチェック
+    /// </summary>
+    public void Validate()
+    {
+        ValidateEmployeeNo();
+
+        ValidateNameKana();
+
+        ValidateBirthday();
+    }
+
+    /// <summary>
+    /// 社員番号チェック
+    /// </summary>
+    private void ValidateEmployeeNo()
+    {
+        if (!Regex.IsMatch(EmployeeNo, @"^[0-9]+$"))
+        {
+            throw new DomainException(
+                "社員番号は数字のみ入力してください。");
+        }
+    }
+
+    /// <summary>
+    /// 氏名かなチェック
+    /// </summary>
+    private void ValidateNameKana()
+    {
+        if (!Regex.IsMatch(NameKana, @"^[ぁ-んー]+$"))
+        {
+            throw new DomainException(
+                "氏名かなはひらがなのみ入力してください。");
+        }
+    }
+
+    /// <summary>
+    /// 生年月日チェック
+    /// </summary>
+    private void ValidateBirthday()
+    {
+        if (Birthday > DateTime.Now)
+        {
+            throw new DomainException(
+                "未来日の生年月日は登録できません。");
+        }
+    }
 }
